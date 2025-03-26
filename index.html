@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longfellow.Life</title>
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,400;0,500;0,700;0,800;0,900;1,200;1,300;1,500;1,600;1,700;1,800;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Piazzolla:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        /* Add some basic styling */
+
+        body {
+            	font-family: 'Piazzolla', serif;
+            	font-size: 18px;
+            	line-height:1.2em;
+            	background-color: white;
+            }
+            /* Inherit fonts for inputs and buttons */
+            input,
+            button,
+            textarea,
+            select {
+              font: inherit;
+            }
+
+            h1 {
+            	font-family: 'Fira Sans', sans-serif;
+            	font-weight: 700;
+            	line-height:1em;
+            	margin-bottom: .5em;
+              font-size:1.3em;
+            }
+
+            h2 {
+            	font-family: 'Fira Sans Condensed', sans-serif;
+            	font-weight: 500;
+            	margin-top: 0;
+            	margin-bottom: .5em;
+            	font-size:1.2em;
+            }
+
+            h3 {
+            	font-family: 'Fira Sans Extra Condensed', sans-serif;
+            	font-weight: 400;
+            	font-size:1.1em;
+            }
+
+            h4, h5 {
+            	font-family: 'Fira Sans Extra Condensed', sans-serif;
+            	font-weight: 200;
+            	font-size:.8em;
+              line-height: 1em;
+            }
+
+            p {
+              font-size: 1em;
+            	margin:.75em auto;
+            	line-height: 1.2em;
+            }
+        nav ul { list-style: none; padding: 0; margin: 0;}
+        nav li { display: inline; margin-right: 20px;
+          font-family: 'Fira Sans', sans-serif;
+          font-weight: 500;
+          font-size:1.3em;}
+        /* Freeze the nav bar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white; /* Set a background color */
+            padding: .2em; /* Add some padding */
+            z-index: 100; /* Ensure it's on top of other elements */
+        }
+        .lfl-big {
+          display: block;
+        	margin:1em .5em .25em .25em;
+        }
+        .lfl-small {
+        	display: block;
+        	margin:1em .2em .15em .15em;
+          max-width: 600px;
+        }
+        main {margin-top: 6em;}
+        * {
+            box-sizing: border-box;
+          }
+          .flex-container {
+            display: flex;
+            flex-direction: row;
+            font-size: 30px;
+            text-align: center;
+          }
+          .flex-left {
+            padding: 10px;
+            flex: 50%;
+          }
+          .flex-right {
+            padding: 10px;
+            flex: 50%;
+          }
+          /* Responsive layout - makes a one column-layout instead of two-column layout */
+          @media (max-width: 800px) {
+            img.long-life-logo {
+              max-width: 500px;
+            }
+            .flex-container {
+              flex-direction: column;
+            }
+            .lfl-big {
+              display:none;
+            }
+          }
+          section.books {padding-top: 3em; padding-bottom: 1em;}
+          section.about {padding-top: 1em;}
+    </style>
+
+</head>
+<body>
+    <nav hx-target="#home-nav">
+      <a href="#"><img class="long-life-logo" src="media/LongLife600x85.png" width="600px" height="auto"></a>
+        <ul>
+            <li><a href="#" hx-target="#home-nav">HOME</a></li>
+            <li><a href="#books">BOOKS</a></li>
+            <li><a href="#about">ABOUT</a></li>
+        </ul>
+    </nav>
+    <main id="content">
+      <div class="flex-container">
+        <div class="flex-left">
+          <h1>Little Free Library</h1>
+          <h2>Longfellow Villa</h2>
+          <h4>34th Avenue South & East 31st Street<br>
+            Minneapolis, Minnesota</h4>
+          <p>Books rotated and updated kinda daily.</p>
+          <a href="https://littlefreelibrary.org" target="blank"><img src="media/LFL-logo200x50.png" width="200px" height="50px" style="margin-left:1em;"></a>
+          <p><a href="https://littlefreelibrary.org/ourmap/" target="blank">Find more Little Free Libraries</a></p>
+        </div>
+      	<div class="flex-right">
+      			<h3>Map</h3>
+      			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d705.961134720188!2d-93.22349041187536!3d44.94682819868724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f6282ddb4328e3%3A0xb6eaf7788614fbc5!2s3400%20E%2031st%20St%2C%20Minneapolis%2C%20MN%2055406!5e0!3m2!1sen!2sus!4v1646089266397!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <a name="books"></a>
+      	</div>
+      </div>
+      <section class="books">
+      <span class="lfl-small">
+        <div id="w5e3586272d16ab8e612304f354073dc7"></div><script type="text/javascript" charset="UTF-8" src="https://www.librarything.com/widget_get.php?userid=LongfellowVilla&theID=w5e3586272d16ab8e612304f354073dc7"></script><noscript><a href="https://www.librarything.com/profile/LongfellowVilla">My Library</a> at <a href="https://www.librarything.com">LibraryThing</a></noscript>
+      </span>
+    </section>
+      <section id="About"><a name="about"></a>
+    <h2>About Us</h2>
+  <h3>We Are Local</h3>
+  <p><strong>Longfellow<span style="color:#666666; font-size:.75em;">&#9737;</span>Life</strong> is a private not-for-profit service in the Longfellow neighborhood of Minneapolis, Minnesota. All information provided on this website is provided for your benefit without warranty, as is. News & Information external resources focus on local community culture and small business.</p>
+  <h3>Free Books</h3>
+  <p>With <a href="https://littlefreelibrary.org" target="_blank">Little Free Library</a> we offer free books from our private collection, neighborhood donors, and other charitable sources. We regularly freshen and rotate selections spanning fiction, nonfiction, reference, young adult and children's hard and soft cover books. Books in the Little Free Library section are indexed using <a href="https://www.librarything.com" target="_blank">Library Thing</a>.</p>
+    <h3>Free Content</h3>
+  <p>Content on this site may be shared freely, but not for commercial gain and you should provide attribution to <a href="https://longfellow.life">Longfellow.Life</a>. Learn more about sharing content freely on the web at <a href="https://fsf.org" target="_blank">Creative Commons</a>.</p>
+</section>
+    </main>
+    <footer>
+  		<div>
+  			<h1>Longfellow<span style="color:#666666; font-size:.8em;">&#9737;</span>Life</h1>
+  			<h3>&copy; 2025 Longfellow Life</h3>
+  			<img class="CCfoot" src="media/by-nc-sa-143x50.png">
+  			<div class="footer-right"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="blank"><span class="footer-small">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</span></a></div>
+  		</div>
+  		<a rel="me" href="https://mastodon.social/@Skarjune" target="_blank">Mastodon</a>
+  	</footer>
+</body>
+</html>
