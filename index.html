@@ -79,7 +79,7 @@
         	margin:1em .5em .25em .25em;
         }
         .lfl-small {
-        	display: block;
+        	display: none;
         	margin:1em .2em .15em .15em;
           max-width: 600px;
         }
@@ -102,15 +102,18 @@
             flex: 50%;
           }
           /* Responsive layout - makes a one column-layout instead of two-column layout */
-          @media (max-width: 800px) {
+          @media (max-width: 600px) {
             img.long-life-logo {
-              max-width: 500px;
+              max-width: 350px;
             }
             .flex-container {
               flex-direction: column;
             }
             .lfl-big {
-              display:none;
+              display: none;
+            }
+            .lfl-small {
+              display: block;
             }
           }
           section.books {padding-top: 3em; padding-bottom: 1em;}
@@ -144,10 +147,13 @@
             <a name="books"></a>
       	</div>
       </div>
-      <section class="books">
-      <span class="lfl-small">
-        <div id="w5e3586272d16ab8e612304f354073dc7"></div><script type="text/javascript" charset="UTF-8" src="https://www.librarything.com/widget_get.php?userid=LongfellowVilla&theID=w5e3586272d16ab8e612304f354073dc7"></script><noscript><a href="https://www.librarything.com/profile/LongfellowVilla">My Library</a> at <a href="https://www.librarything.com">LibraryThing</a></noscript>
-      </span>
+    <section class="books">
+        <span class="lfl-big">
+          <div id="w6b38aaa0466650f42200713f9685a5d6"></div><script type="text/javascript" charset="UTF-8" src="https://www.librarything.com/widget_get.php?userid=LongfellowVilla&theID=w6b38aaa0466650f42200713f9685a5d6"></script><noscript><a href="https://www.librarything.com/profile/LongfellowVilla">Villa Library</a> at <a href="https://www.librarything.com">LibraryThing</a></noscript>
+        </span>
+        <span class="lfl-small">
+          <div id="w5e3586272d16ab8e612304f354073dc7"></div><script type="text/javascript" charset="UTF-8" src="https://www.librarything.com/widget_get.php?userid=LongfellowVilla&theID=w5e3586272d16ab8e612304f354073dc7"></script><noscript><a href="https://www.librarything.com/profile/LongfellowVilla">My Library</a> at <a href="https://www.librarything.com">LibraryThing</a></noscript>
+       </span>
     </section>
       <section id="About"><a name="about"></a>
     <h2>About Us</h2>
